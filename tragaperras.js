@@ -1,7 +1,5 @@
-/**
- * Libreria para máquina tragaperras
- * @author LanyuEStudio
- */
+//Libreria para máquina tragaperras
+
 
 //Cargar una capa con la imagen adecuada
 function cargarCapaConSlotItem(slotDiv, slotItem) {
