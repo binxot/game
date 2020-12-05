@@ -162,5 +162,31 @@
 	banco = new Banca(50);
 	notificarSaldo();
 </script>
+	<h2>¿Como se juega?</h2>
+		<ul>
+		  <li>Se puede apostar como máximo el saldo. Se comienza con 50 unidades. Se puede cambiar la cantidad para apostar cambiando el valor del cajetín.</li>
+		  <li>Si se llega a 100 o más unidades se gana el juego. Si se llega a cero se pierde</li>
+		  <li>Cada apuesta permite un giro de toda la linea que se iniciará al apretar el botón de giro. La linea empezará a detenerse al soltar el botón de giro</li>
+		  <li>Una vez que se ha girado toda la linea se permite el giro de una casilla apretando la casilla que se quiere girar (se coloreará su fondo de amarillo) y se apostará la cantidad que se marque en ese momento. A la finalización de ese giro se deberá volver a apostar por un giro de linea completo para continuar.</li>
+		  <li> Hay seis resultados distintos por casillas cuyos premios son:</li>
+			<ul>
+			  <li>Limón y Naranja: 0</li>
+			  <li>Plátanos: 0.5</li>
+			  <li>Sandía y Cerezas: 1</li>
+			  <li>Estrella: 2</li>
+			</ul>
+		  <li>Para calcular el premio de la línea se usa lo siguiente:</li>
+			<ul>
+			  <li>Se empieza con premio 0 y se resuelven los premios de las casillas en el orden que se va deteniendo el giro (izquierda a drecha)</li>
+			  <li>Si el premio que se está calculando tiene actualmente un valor de cero, cuando se alcance una casilla con premio mayor que cero el premio actual para a ser ese valor</li>
+			  <li>Si el premio que se está calculando tiene actualmente un valor mayor de cero, se multiplica el premio actual por el valor del premio de la casilla</li>
+			  <li>Si las tres casillas son iguales se multiplica el premio de la linea completa calculado previament por el número de casillas de la línea (en nuestro caso *3)</li>
+		  </ul>
+		  <li>Las ganancias son el producto de la apuesta por el premio de la linea</li>
+		</ul>
+
+		<p>Se mantiene un histórico de saldos en la parte de abajo para ver la evolución. Como máximo se muestran los 15 últimos.</p>
+
+		<p>En un futuro se ampliará la funcionalidad quitando el límite de ganancias de 100 y añadiendo una tabla de puntuaciones de los mayores saldos conseguidos en una partida.</p>
 </body>
 </html>
